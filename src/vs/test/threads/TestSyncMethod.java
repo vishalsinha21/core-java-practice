@@ -1,4 +1,4 @@
-package vs.test;
+package vs.test.threads;
 
 /**
  * Created by vishalsinha on 3/19/17.
