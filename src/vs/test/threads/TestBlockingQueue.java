@@ -42,8 +42,8 @@ class Producer implements Runnable {
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 100; i++) {
-                Thread.sleep(100);
+            for (int i = 0; i < 10; i++) {
+                Thread.sleep(500);
                 String message = "message" + i;
                 queue.put(new Payload(message));
                 System.out.println("producing message: " + message);
@@ -65,10 +65,10 @@ class Consumer implements Runnable {
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10; i++) {
+                Thread.sleep(1000);
                 Payload payload = queue.take();
                 System.out.println("consuming message: " + payload.getMessage());
-                Thread.sleep(100);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
