@@ -2,6 +2,7 @@ package vs.test;
 
 import java.util.Scanner;
 import java.util.TreeSet;
+import java.util.regex.Pattern;
 
 public class Solution {
 
@@ -17,5 +18,7 @@ public class Solution {
 
         System.out.println(sorted.first());
         System.out.println(sorted.last());
+
+        Pattern compile = Pattern.compile(line);
     }
 }

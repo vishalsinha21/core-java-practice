@@ -6,7 +6,7 @@ public class TestThreadJoin {
         Thread t1 = new Thread(new MyThread());
         Thread t2 = new Thread(new MyThread());
         Thread t3 = new Thread(new MyThread());
-        
+
         startAndCompleteThread(t1);
         startAndCompleteThread(t2);
         startAndCompleteThread(t3);
@@ -40,7 +40,7 @@ class MyThread implements Runnable {
         try {
             for (int i = 0; i < 10; i++) {
                 System.out.println(Thread.currentThread().getName() + ":" + i);
-                Thread.sleep(100);    
+                Thread.sleep(100);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

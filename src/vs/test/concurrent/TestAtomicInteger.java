@@ -1,4 +1,4 @@
-package vs.test.threads.synchronization;
+package vs.test.concurrent;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

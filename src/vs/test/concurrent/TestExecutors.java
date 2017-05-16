@@ -1,7 +1,8 @@
-package vs.test.threads;
+package vs.test.concurrent;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class TestExecutors {
 
@@ -11,7 +12,6 @@ public class TestExecutors {
         for (int i = 0; i < 10; i++) {
             executorService.execute(new WorkerThread(i+""));
         }
-        
         
         executorService.shutdown();
         while(!executorService.isTerminated()) {
@@ -42,7 +42,7 @@ class WorkerThread implements Runnable {
 
     private void processCommand() {
         try {
-            Thread.sleep(2000);
+            TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

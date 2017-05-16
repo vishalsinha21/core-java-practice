@@ -1,4 +1,4 @@
-package vs.test.threads;
+package vs.test.concurrent;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -6,12 +6,12 @@ public class TestCountDownLatch {
 
     public static void main(String[] args) {
         CountDownLatch latch = new CountDownLatch(3);
-        Thread cacheService = new Thread(new Service(latch), "cacheService");
-        Thread alertService = new Thread(new Service(latch), "alertService");
-        Thread validationService = new Thread(new Service(latch), "validationService");
+        Thread cacheService = new Thread(new Service(latch), "Cache Service");
+        Thread namingService = new Thread(new Service(latch), "Naming Service");
+        Thread validationService = new Thread(new Service(latch), "Validation Service");
 
         cacheService.start();
-        alertService.start();
+        namingService.start();
         validationService.start();
         
         try {

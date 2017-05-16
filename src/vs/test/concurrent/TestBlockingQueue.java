@@ -1,4 +1,4 @@
-package vs.test.threads;
+package vs.test.concurrent;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
