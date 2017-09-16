@@ -1,4 +1,4 @@
-package pattern.behavioral.observer;
+package pattern.behavioral.observer.example1;
 
 public class HexaObserver implements Observer {
 

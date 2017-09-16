@@ -1,4 +1,4 @@
-package pattern.behavioral.observer;
+package pattern.behavioral.observer.example1;
 
 import java.util.ArrayList;
 import java.util.List;
