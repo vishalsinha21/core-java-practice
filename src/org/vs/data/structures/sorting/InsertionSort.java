@@ -1,8 +1,8 @@
-package org.vs.data.structures;
+package org.vs.data.structures.sorting;
 
 
-import static org.vs.data.structures.CommonUtil.printArray;
-import static org.vs.data.structures.CommonUtil.swap;
+import static org.vs.data.structures.sorting.CommonUtil.printArray;
+import static org.vs.data.structures.sorting.CommonUtil.swap;
 
 public class InsertionSort {
 

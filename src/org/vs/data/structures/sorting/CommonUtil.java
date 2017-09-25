@@ -1,4 +1,4 @@
-package org.vs.data.structures;
+package org.vs.data.structures.sorting;
 
 public class CommonUtil {
 
