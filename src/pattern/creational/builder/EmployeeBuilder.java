@@ -28,7 +28,7 @@ public class EmployeeBuilder {
         return this;
     }
 
-    public EmployeeBuilder withAge(String name) {
+    public EmployeeBuilder withAge(int age) {
         this.age = age;
         return this;
     }
