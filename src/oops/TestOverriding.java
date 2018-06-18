@@ -31,11 +31,11 @@ class Derived1 extends Base {
     }
 
     public void method1(String str) {
-        System.out.println("Derived 1");
+        System.out.println("Derived a");
     }
 
     public void method2() {
-        System.out.println("Derived 1");
+        System.out.println("Derived a");
     }
 }
 
