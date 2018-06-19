@@ -1,17 +1,18 @@
 package ooad.parking;
 
 public class ParkingSlot {
+
     private String slotId;
     private String slotNumber;
     private ParkingStatus status;
-    private Floor floor;
-    private Parking parking;
+    private SlotSize slotSize;
     private Vehicle vehicle;
 
-    public ParkingSlot(String slotId, String slotNumber, ParkingStatus status) {
+    public ParkingSlot(String slotId, String slotNumber, ParkingStatus status, SlotSize slotSize) {
         this.slotId = slotId;
         this.slotNumber = slotNumber;
         this.status = status;
+        this.slotSize = slotSize;
     }
 
     @Override
@@ -20,8 +21,12 @@ public class ParkingSlot {
     }
 
     public void parkVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
-        status = ParkingStatus.OCCUPIED;
+        if (this.slotSize.isVehicleParkingPossible(vehicle)) {
+            this.vehicle = vehicle;
+            status = ParkingStatus.OCCUPIED;
+        } else {
+            throw new IllegalArgumentException("parking not possible for this vehicle type in this slot");
+        }
     }
 
     public void emptySlot() {
