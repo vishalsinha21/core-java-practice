@@ -4,8 +4,8 @@ public class TestSyncMethod {
 
     public static void main(String[] args) {
         Table table = new Table();
-        MyTableThread thread1 = new MyTableThread(table, 5);
-        MyTableThread thread2 = new MyTableThread(table, 100);
+        Thread thread1 = new Thread(new MyTableThread(table, 5));
+        Thread thread2 = new Thread(new MyTableThread(table, 100));
 
         thread1.start();
         thread2.start();
@@ -26,7 +26,7 @@ class Table {
     }
 }
 
-class MyTableThread extends Thread {
+class MyTableThread implements Runnable {
 
     private Table table;
     private int n;

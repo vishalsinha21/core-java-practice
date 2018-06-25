@@ -1,5 +1,6 @@
 package ooad.parking;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -22,5 +23,11 @@ public enum SlotSize {
 
     public boolean isVehicleParkingPossible(Vehicle vehicle) {
         return vehicleTypesAllowed.contains(vehicle.getType());
+    }
+
+    public SlotSize from(VehicleType vehicleType) {
+        return Arrays.stream(SlotSize.values())
+                .filter(size -> size.vehicleTypesAllowed.contains(vehicleType))
+                .findFirst().orElseThrow(() -> new IllegalArgumentException("no slot size found for vehicle type: " + vehicleType));
     }
 }

@@ -10,12 +10,12 @@ public class TestParking {
     public static void main(String[] args) {
         List<ParkingSlot> slots = new ArrayList<>();
         for (int i = 1; i <= 20; i++) {
-            slots.add(new ParkingSlot(String.valueOf(i), String.valueOf(i), ParkingStatus.EMPTY));
+            slots.add(new ParkingSlot(String.valueOf(i), String.valueOf(i), ParkingStatus.EMPTY, SlotSize.MEDIUM));
         }
 
-        Vehicle vehicle1 = new Car("car1");
-        Vehicle vehicle2 = new Car("car2");
-        Vehicle vehicle3 = new Car("car3");
+        Vehicle vehicle1 = new HatchBackCar("car1");
+        Vehicle vehicle2 = new HatchBackCar("car2");
+        Vehicle vehicle3 = new HatchBackCar("car3");
 
         slots.get(0).parkVehicle(vehicle1);
         slots.get(6).parkVehicle(vehicle2);
