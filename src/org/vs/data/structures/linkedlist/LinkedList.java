@@ -1,5 +1,8 @@
 package org.vs.data.structures.linkedlist;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedList {
 
     private Node head = null;
@@ -73,6 +76,39 @@ public class LinkedList {
         return builder.toString();
     }
 
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.addAtHead("1");
+        list.addAtHead("2");
+        list.addAtHead("3");
+        list.addAtHead("4");
+        list.addAtHead("5");
+
+        Node four = list.head.next;
+        Node one = list.head.next.next.next.next;
+        one.next = four;
+
+        Node current = list.head;
+
+        System.out.println(hasCycle(current));
+    }
+
+    private static boolean hasCycle(Node current) {
+        List<Node> nodeList = new ArrayList<>();
+
+        while (current != null) {
+            if (nodeList.contains(current)) {
+                System.out.println("has cycle");
+                return true;
+            } else {
+                nodeList.add(current);
+                current = current.next;
+            }
+        }
+
+        return false;
+    }
 }
 
 class Node {
