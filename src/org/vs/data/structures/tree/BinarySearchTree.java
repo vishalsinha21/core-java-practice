@@ -80,6 +80,30 @@ public class BinarySearchTree {
         }
     }
 
+    boolean checkBST() {
+        return checkBinary(root);
+    }
+
+    boolean checkBinary(TreeNode node) {
+        boolean result = true;
+        if (node.left != null) {
+            if (node.left.data >= node.data) {
+                result = result && false;
+            } else {
+                result = result && checkBinary(node.left);
+            }
+        }
+
+        if (node.right != null) {
+            if (node.right.data <= node.data) {
+                result = result && false;
+            } else {
+                result = result && checkBinary(node.right);
+            }
+        }
+
+        return result;
+    }
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
@@ -118,7 +142,31 @@ public class BinarySearchTree {
         System.out.println(tree.delete(14));
         System.out.println(tree.size);
         System.out.println(tree);
+
+        checkIfNotBinary();
     }
+
+    private static void checkIfNotBinary() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+        tree.add(4);
+        tree.add(3);
+        tree.add(5);
+        tree.add(2);
+        tree.add(1);
+        tree.add(6);
+        tree.add(7);
+
+        System.out.println(tree);
+        System.out.println(tree.checkBST());
+
+        tree.root.left.data = 4;
+        tree.root.data = 3;
+        System.out.println(tree);
+        System.out.println(tree.checkBST());
+
+    }
+
 }
 
 class TreeNode {

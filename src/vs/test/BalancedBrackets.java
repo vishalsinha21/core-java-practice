@@ -6,11 +6,6 @@ import java.util.Stack;
 public class BalancedBrackets {
 
     private static final Scanner scanner = new Scanner(System.in);
-
-    public static String isBalancedBrackets(String expr) {
-        return isBalancedAlt(expr) ? "YES" : "NO";
-    }
-
     public static boolean isBalanced(String expr) {
         String[] strArr = expr.split("");
         Stack<String> stack = new Stack<>();
@@ -33,6 +28,12 @@ public class BalancedBrackets {
 
         return stack.empty();
     }
+
+    public static String isBalancedBrackets(String expr) {
+        return isBalancedAlt(expr) ? "YES" : "NO";
+    }
+
+
 
     public static boolean isBalancedAlt(String expr) {
         String[] arr = expr.split("");
