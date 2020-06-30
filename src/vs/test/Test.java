@@ -1,18 +1,13 @@
 package vs.test;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Test {
 
 
     public static void main(String args[]) {
-        int x = 3;
-        boolean isDefect = false;
-        do {
-            x++;
-            if (isDefect = true)
-                System.out.print("A");
-            else
-                System.out.print("B");
-        }
-        while (x <= 5);
+
+        System.out.println(new Date(2020, 12, 31).getTime());
     }
 }
