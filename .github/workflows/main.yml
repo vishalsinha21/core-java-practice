@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Dynamic checklist action
         id: dynamic_checklist
-      - uses: vishalsinha21/dc-github-action@v1
+        uses: vishalsinha21/dc-github-action@v1
         with:
           mappingFile: 'mapping.json'
         env:
