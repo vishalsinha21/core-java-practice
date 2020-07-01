@@ -1,10 +1,8 @@
 package org.vs.data.structures;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Stack;
 
 public class Solution {
 
