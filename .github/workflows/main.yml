@@ -3,18 +3,6 @@ on:
     branches: [ master ]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-      - name: Hello world action step
-        id: hello
-        uses: vishalsinha21/github-actions-hello-world@v2
-        with:
-          who-to-greet: 'Vishal!'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-
   checklist_job:
     runs-on: ubuntu-latest
     name: A job to create dynamic checklist
@@ -28,3 +16,16 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Get the output checklist
         run: echo "The final checklist ${{ steps.dynamic_checklist.outputs.checklist }}"
+
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: vishalsinha21/github-actions-hello-world@v2
+        with:
+          who-to-greet: 'Vishal!'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
+
