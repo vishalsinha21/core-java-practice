@@ -11,6 +11,10 @@
     {
       "keywords": ["RequestMapping", "GetMapping", "PostMapping", "PutMapping"],
       "comment": "Endpoint URLs exposed by application use only small case"
+    },
+    {
+      "keywords": ["procedure", "storedProcedure"],
+      "comment": "Input params have been cleared after fetching results from procedure"
     }
   ]
 }
