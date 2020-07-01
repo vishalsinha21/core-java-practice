@@ -7,28 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to create dynamic checklist
     steps:
-      - uses: actions/checkout@v1
-        with:
-          ref: ${{ github.head_ref }}
       - name: Dynamic checklist action
         id: dynamic_checklist
         uses: vishalsinha21/dc-github-action@v2
         with:
-          mappingFile: 'mapping.json'
+          mappingFile: './mapping.json'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Get the output checklist
         run: echo "The final checklist ${{ steps.dynamic_checklist.outputs.checklist }}"
-
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-      - name: Hello world action step
-        id: hello
-        uses: vishalsinha21/github-actions-hello-world@v2
-        with:
-          who-to-greet: 'Vishal!'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
 
