@@ -12,7 +12,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Dynamic checklist action
         id: dynamic_checklist
-        uses: vishalsinha21/dc-github-action@v3
+        uses: vishalsinha21/dynamic-checklist@v1
         with:
           mappingFile: 'mapping.json'
         env:
