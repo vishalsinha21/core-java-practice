@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to create dynamic checklist
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
       - name: Dynamic checklist action
