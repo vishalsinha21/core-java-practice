@@ -21,6 +21,7 @@ jobs:
           mappingFile: './checklist/mapping.json'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          ACTIONS_STEP_DEBUG: true
       - name: Print checklist
         run: echo "The final checklist ${{ steps.dynamic_checklist.outputs.checklist }}"
 
