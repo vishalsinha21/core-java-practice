@@ -16,7 +16,7 @@ jobs:
         id: dynamic_checklist
         uses: vishalsinha21/dynamic-checklist@v1
         with:
-          mappingFile: 'mapping.json'
+          mappingFile: './checklist/mapping.json'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Print checklist
