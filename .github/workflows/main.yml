@@ -8,10 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to create dynamic checklist
     steps:
-      - name: Print mapping json file
-        run: |
-          content = `cat main.json`
-          echo "$content"
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
