@@ -5,6 +5,9 @@ on:
 env:
   input1: value1
   input2: value2
+  input3:
+    input31: value31
+    input32: value32
   mappings:
     - keywords:
       - create index
