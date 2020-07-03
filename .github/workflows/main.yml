@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Print mapping json file
         run: |
-          content = `cat mapping.json`
+          content = `cat main.json`
           echo "$content"
       - name: Checkout repo
         uses: actions/checkout@v2
