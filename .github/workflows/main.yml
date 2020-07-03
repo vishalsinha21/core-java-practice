@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to create dynamic checklist
     steps:
+      - name: Print mapping json file
+        run: |
+          content = `cat mapping.json`
+          echo "$content"
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
@@ -19,6 +23,6 @@ jobs:
           mappingFile: 'mapping.json'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Get the output checklist
+      - name: Print checklist
         run: echo "The final checklist ${{ steps.dynamic_checklist.outputs.checklist }}"
 
