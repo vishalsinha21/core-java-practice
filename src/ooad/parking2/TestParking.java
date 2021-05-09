@@ -1,4 +1,4 @@
-package parking;
+package ooad.parking2;
 
 import static java.util.Arrays.asList;
 

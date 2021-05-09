@@ -1,4 +1,4 @@
-package parking;
+package ooad.parking2;
 
 public class ParkingSpot {
 

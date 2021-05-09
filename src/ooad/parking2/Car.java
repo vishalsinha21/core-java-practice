@@ -1,10 +1,10 @@
-package parking;
+package ooad.parking2;
 
 import java.util.List;
 import java.util.Optional;
 
-import static parking.SpotSize.COMPACT;
-import static parking.SpotSize.LARGE;
+import static ooad.parking2.SpotSize.COMPACT;
+import static ooad.parking2.SpotSize.LARGE;
 
 public class Car extends Vehicle {
 
