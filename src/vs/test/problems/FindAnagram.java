@@ -1,4 +1,4 @@
-package vs.test;
+package vs.test.problems;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package vs.test;
+package vs.test.problems;
 
 public class Melodious {
 
